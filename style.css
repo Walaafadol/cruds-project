@@ -7,6 +7,9 @@
 .cruds {
   width: 90%;
 }
+body {
+  overflow-x: hidden;
+}
 .header {
   text-align: center;
   margin: 10px auto;
@@ -15,7 +18,7 @@
 }
 input,
 button {
-  width: 100%;
+  width: 99%;
   height: 30px;
   margin: 4px 0;
   outline: none;
@@ -31,8 +34,13 @@ input:focus {
 }
 .inputs {
   width: 90%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   margin: 0px auto;
 }
+
 .inputs small {
   background-color: red;
   padding: 10px 10px;
@@ -70,9 +78,14 @@ button:hover {
   background-color: #111;
 }
 table {
-  width: 90%;
   margin: 10px auto;
   text-align: center;
+  width: 90%;
+}
+@media (max-width: 880px) {
+  table th {
+    font-size: 10px;
+  }
 }
 thead {
   text-transform: uppercase;
@@ -84,15 +97,31 @@ tbody {
 tbody button {
   background-color: blue;
   border-radius: 10px;
-  width: 50%;
+  width: 50px;
 }
 #update,
 #del {
   height: 30px;
   padding: 0px;
   margin: 0px;
-  width: 100px;
+  width: 50px;
 }
 #deall {
-  margin: 20px 0;
+  margin: 20px 0px;
+}
+th {
+  font-size: 12px;
+}
+@media (max-width: 590px) {
+  table td,
+  th {
+    font-size: 8px;
+    padding: 0;
+    margin: 0;
+  }
+  #update,
+  #del {
+    font-size: 7px;
+    width: 25px;
+  }
 }
